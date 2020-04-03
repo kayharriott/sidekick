@@ -1,23 +1,113 @@
-div.header {
-    box-shadow: 0px 0.8px 3px grey;
+body{
+    background-color: rgb(255, 255, 255);
 }
 
+.lmenu {
+    grid-area: lmenu;
+    /*border-style: solid;*/
+
+}
+
+.logo {
+    grid-area: logo;
+    /*border-style: solid;*/
+    position: fixed;
+width: 500px;
+height: 200px;
+top: 22%;
+left: 50%;
+margin-top: -140px; /* Negative half of height. */
+margin-left: -250px; /* Negative half of width. */
+}
+
+
+.rmenu {
+    grid-area: rmenu;
+    /*border-style: solid;*/
+}
+
+
+.fspace {
+    grid-area: fspace;
+   /*border-style: solid;*/
+}
+
+.content {
+    grid-area: content;
+    /*border-style: solid;*/
+}
+
+div.lmenu{
+    text-align: left;
+}
+
+div.rmenu {
+    text-align: right;    
+}
 div.fspace {
     text-align: center;
 }
 
-div.content {
+div.logo {
     text-align: center;
 }
 
+div.content{
+    text-align: center;
+}
+
+div.exinfo{
+    text-align: center;
+}
 
 .gridcontainer{
     display: grid;
-    grid-template-areas:'header   header   header    header   header   header'
-                        'fspace   fspace   fspace    fspace   fspace   fspace'
-                        'content  content  content   content  content  content'
-                        'content  content  content   content  content  content'
-                        'content  content  content   content  content  content'
-                        'content  content  content   content  content  content'                        
+    grid-template-areas:'lmenu    lmenu    logo     logo     rmenu    rmenu'
+                        'lmenu    lmenu    logo     logo     rmenu    rmenu'
+                        'content  content  content  content  content  content'
+                        'content  content  content  content  content  content'
+                        'content  content  content  content  content  content'
+                        'content  content  content  content  content  content'                  
                         ;
+}
+
+.lmenu p {
+    display: inline-block;
+}
+
+.rmenu p{
+    display: inline-block;
+}
+
+#language {
+    border-right: solid white;
+    border-left: solid white;
+    border-bottom: solid white;
+    border-top: solid white;
+    
+}
+
+.language{
+    color: solid white;
+}
+
+.language:visited {
+    color:solid white;
+} 
+
+.language:hover {
+    color: solid white;
+    border: 0px;
+} 
+
+.language:active {
+    color: solid white;
+}
+
+html, body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
