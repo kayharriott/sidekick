@@ -6,18 +6,21 @@
         <script type="text/javascript" src="./javascript.js"></script>
         <link rel = "stylesheet" type = "text/css" href = "styles.css" />
     </head>
-    <body>
+    <body class="body" id="body">
         <div class = "gridcontainer">
             <div  class = "lmenu">
-               <p>Sidekick Profiles &nbsp;&nbsp;&nbsp;&nbsp;</p> 
-               <p>FAQ</p>
+                <p id="profiles" onclick="myFunction()"><a class="pointer-link">Sidekick Profiles</a></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <p id="faq" onclick="myFunction()"><a class="pointer-link">FAQ</a></p>
             </div>
             <div class = "logo">
-                <p>Logo</p>
+                <a href="index.html"><img id="logophoto" src="./logo.png"><img></a>
             </div>
             <div class = "rmenu">
-                <p>Sign up &nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <p>Sign in &nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p id="signup" onclick="myFunction()"><a href= "./signup.html"class="pointer-link">Sign up</a></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <p id="signin"><a class="pointer-link">Sign in</a></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <!--<select id="language" class="language">
                     <option value="english">English (UK)</option>
                     <option value="spanish">Spanish</option>
@@ -27,13 +30,14 @@
                 <p>English (UK)</p>
             </div>
             <div class="fspace">
-                <br><br><br><br>
+                <br><br><br>
                 <br><br><br>
             </div>
             <div class="content">
                 <div class="title" id="title">
                     <h1>Make your next trip <br> your best trip</h1>
                 </div>
+
                 <br><br><br><br><br>
                 <!--
                 <div class="info">
