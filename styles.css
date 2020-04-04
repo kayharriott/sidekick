@@ -140,6 +140,39 @@ html, body {
     width: 100px;
 }
 
-#signup, signin{
+#signup, #signin{
     cursor: hover;
+    text-decoration: none;
 }
+
+
+#profiles:link {
+    color: white;
+    text-decoration: none;
+}
+#faq:visited {
+    color: none;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: none;
+    text-decoration: none;
+}
+
+a {
+    color:none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: white;
+} 
+
+a:hover {
+    color:none;
+}  
+a:active {
+    color:none;
+} 

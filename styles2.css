@@ -34,7 +34,7 @@ body{
 .content {
     grid-area: content;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-left: 10px;
+    
 }
 
 
@@ -79,6 +79,15 @@ div.exinfo{
 .lmenu p {
     display: inline-block;
     padding-left: 20px;
+}
+
+.signupButtons h2{
+    display: inline-block; 
+    color: white;
+}
+
+.signupButtons {
+    text-align: center;
 }
 
 .rmenu p{
@@ -141,6 +150,27 @@ html, body {
     width: 100px;
 }
 
-#signup, signin{
+#signup, #signin{
     cursor: hover;
+}
+
+
+
+#profiles:visited {
+    color: none;
+    text-decoration: none;
+}
+#faq:visited {
+    color: none;
+    text-decoration: none;
+}
+
+#signup:visited {
+    color: none;
+    text-decoration: none;
+}
+
+#signin:visited {
+    color: none;
+    text-decoration: none;
 }
