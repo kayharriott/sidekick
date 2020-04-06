@@ -1,11 +1,6 @@
 body{
-    background: url("./background2.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow-y: auto;
-    overflow-x: auto;
+    overflow-x: auto;    
 }
 
 .lmenu {
@@ -36,7 +31,7 @@ body{
 .content {
     grid-area: content;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    padding-left: 10px;
 }
 
 
@@ -56,6 +51,7 @@ div.logo {
 }
 
 div.content{
+    text-align: left;
 }
 
 div.exinfo{
@@ -83,15 +79,6 @@ div.exinfo{
     padding-left: 20px;
 }
 
-.signupButtons h2{
-    display: inline-block; 
-    color: white;
-}
-
-.signupButtons {
-    text-align: center;
-}
-
 .rmenu p{
     display: inline-block;
     padding-right: 20px;
@@ -114,6 +101,34 @@ div.exinfo{
     color: solid white;
 }
 
+.form-container {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+
+    overflow: auto;
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translate(-50%);
+    transform: translateY(-50%) translate(-50%);
+    z-index: 99 !important;
+    
+    
+  
+}
+
+
+
 html, body {
     position: fixed;
     top: 0;
@@ -123,14 +138,19 @@ html, body {
 }
 
 .title{
+    transform: rotate(-8deg) skew(-5deg);
     font-size: x-large;
+    z-index: -1;
 }
 
 .info{
-    text-align: center;
-    color: white;
-    font-size: medium;
+    background-color:  rgb(255, 230, 149);
 }
+
+.form-popup {
+    display: none;
+    position: fixed;
+  }
 
 /*ids*/
 #language {
@@ -144,7 +164,6 @@ html, body {
 
 #title {
     color:white;
-    text-align: center;
 }
 
 #logophoto{
@@ -154,29 +173,14 @@ html, body {
 
 #signup, #signin{
     cursor: hover;
-}
-
-
-
-#profiles:visited {
-    color: none;
-    text-decoration: none;
-}
-#faq:visited {
-    color: none;
     text-decoration: none;
 }
 
-#signup:visited {
-    color: none;
+
+#profiles:link {
+    color: white;
     text-decoration: none;
 }
-
-#signin:visited {
-    color: none;
-    text-decoration: none;
-}
-
 #faq:visited {
     color: none;
     text-decoration: none;
@@ -194,7 +198,7 @@ a {
 
 a:visited {
     color: black;
-    text-decoration: transparent white;
+    text-decoration: white;
 } 
 
 a:hover {
@@ -204,12 +208,82 @@ a:active {
     color:none;
 } 
 
-a
-{
-   text-decoration:none;
-}
 
-a.underlined
-{
-   text-decoration:underline;
-}
+
+
+
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46, 39, 116, 0.842);
+    cursor: pointer;
+    z-index: 0;
+  }
+
+
+
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  .form-popup {
+    z-index: 99 !important;
+    margin-left: 20%;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px; 
+  }
+  
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
